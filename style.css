@@ -1,0 +1,97 @@
+/* Structure principale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh; /* Assure que la page prend toute la hauteur */
+}
+
+/* Barre latérale */
+.sidebar {
+    position: fixed; /* Barre latérale fixée */
+    top: 0;          /* Distance par rapport au haut de la page */
+    left: 0;         /* Distance par rapport au côté gauche */
+    width: 250px;    /* Largeur de la barre latérale */
+    height: 100vh;   /* Prend toute la hauteur de la fenêtre */
+    background-color: #377d8b; /* Couleur de fond */
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse */
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #2b5d66;
+}
+
+/* Contenu principal */
+.content {
+    margin-left: 270px; /* Ajoute un espace pour ne pas chevaucher la barre latérale */
+    padding: 20px;
+}
+
+header {
+    background: #f4f4f4;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto; /* Ajoute un défilement horizontal si le code est trop long */
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+    color: #7282c7;
+    font-size: 14px;
+}
+
+
