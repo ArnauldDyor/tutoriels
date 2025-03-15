@@ -15,7 +15,7 @@
                 <ul>
                     <li><a href="index.html">Tutoriel 1 : Installation et configuration git</a></li>
 					<li><a href="tutoriel2.html">Tutoriel 2 : Utiliser Git: commandes basiques</a></li>
-					<li><a href="tutoriel3.html">Tutoriel 3 : </a></li>
+					<li><a href="tutoriel3.html">Tutoriel 3 : Utiliser Git: commandes avancées</a></li>
 					<li><a href="ressources">Ressources</a></li>
                 </ul>
             </nav>
@@ -24,12 +24,29 @@
         <!-- Contenu principal -->
         <main class="content">
             <header>
-                <h1>Tutoriel d'Installation et Configuration de Git</h1>
+                <h1>Installation et Configuration de Git</h1>
             </header>
             <section>
                 <h2>1. Installation de Git</h2>
-                <p><ul>Sur Windows</ul>
-					<ol>Télécharger Git</ol>
+                <p><ol>Sur Windows</ol>
+					<li>Télécharger Git</li>
+					    <p>Rendez-vous sur git-scm.com et téléchargez l’installateur pour Windows.</p>
+					<li>Lancer l'installation</li>
+						<p>Exécutez le fichier .exe téléchargé.
+						Acceptez les termes et conditions.
+						Options importantes à choisir pendant l’installation :
+						<ul>
+							<li>Editor par défaut : Choisissez VS Code ou un autre éditeur si nécessaire.</li>
+							<li>PATH Environment : Sélectionnez Git from the command line and also from 3rd-party software.</li>
+							<li>Line Ending Conversion : Sélectionnez Checkout Windows-style, commit Unix-style line endings.</li>
+						</ul></p>
+					<li>Vérifier l’installation</li>
+					<p>Ouvrez Git Bash et exécutez :
+						<pre>
+							<code class="bash">
+								git --version
+							</code>
+						</pre></p>
 					
 				</p>
             </section>
