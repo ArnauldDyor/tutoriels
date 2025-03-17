@@ -74,11 +74,73 @@
 						</ol>
 					</p>
 					
+					<p><h3>Sur Linux (Debian/Ubuntu, Fedora, Arch)</h3>
+						<p><h4>Sur Debian/Ubuntu :</h4>
+								<pre>
+									<code class="bash">
+										sudo apt update
+										sudo apt install git
+									</code>
+								</pre></p>
+						
+						<p><h4>Sur Fedora :</h4>
+								<pre>
+									<code class="bash">
+										sudo dnf install git
+									</code>
+								</pre></p>
+								
+						<p><h4>Sur Arch Linux :</h4>
+								<pre>
+									<code class="bash">
+										sudo pacman -S git
+									</code>
+								</pre></p>
+								
+						<p><h4>Vérifier l’installation :</h4>
+								<pre>
+									<code class="bash">
+										git --version
+									</code>
+								</pre></p>
+					</p>
+					
             </section>
+			<section>
+				<h2>2. Configuration initiale de Git</h2>
+					<p><h3>Configurer le nom et l'email</h3>
+						<pre>
+							<code class="bash">
+								git config --global user.name "Votre Nom"
+								git config --global user.email "votre.email@example.com"
+							</code>
+						</pre></p>
+					</p>
+					
+					<p><h3>Vérifier la configuration actuelle</h3>
+						<pre>
+							<code class="bash">
+								git config --list
+							</code>
+						</pre></p>
+					</p>
+					
+					<p><h3>Configurer l'éditeur par défaut</h3>
+					<p>Si vous voulez utiliser VS Code comme éditeur :</p>
+						<pre>
+							<code class="bash">
+								git config --global core.editor "code --wait"
+							</code>
+						</pre></p>
+					</p>
+			</section>
+			<section>
+				<h2>3. Génération et ajout d’une clé SSH (optionnel mais recommandé)</h2>
+			</section>
         </main>
     </div>
     <footer>
-        <p>© 2025 esgi-reporting. Tous droits réservés.</p>
+        <p>© 2025 esgi-tutoriels. Tous droits réservés.</p>
     </footer>
 </body>
 </html>
