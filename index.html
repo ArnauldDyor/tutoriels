@@ -136,6 +136,41 @@
 			</section>
 			<section>
 				<h2>3. Génération et ajout d’une clé SSH (optionnel mais recommandé)</h2>
+				<p><h3>Générer une clé SSH</h3>
+						<pre>
+							<code class="bash">
+								ssh-keygen -t rsa -b 4096 -C "votre.email@example.com"
+							</code>
+						</pre>
+					</p>
+					<ul>
+						<li>Appuyez sur Entrée pour enregistrer dans le dossier par défaut (~/.ssh/id_rsa).</li>
+						<li>Entrez (ou non) une phrase secrète.</li>
+					</ul>
+					<p><h3>Ajouter la clé SSH à GitHub</h3>
+					<ol>
+						<li>Afficher la clé SSH générée :</li>
+						<pre>
+							<code class="bash">
+								cat ~/.ssh/id_rsa.pub
+							</code>
+						</pre>
+						<li>Copiez la clé et ajoutez-la sur GitHub :</li>
+							<ul>
+								<li>Allez sur GitHub > Settings > SSH and GPG keys.</li>
+								<li>Cliquez sur New SSH Key et collez la clé.</li>
+							</ul>
+						<li>Tester la connexion :</li>
+							<pre>
+								<code class="bash">
+									ssh -T git@github.com
+								</code>
+							</pre>
+							<ul>
+								<li>Si tout fonctionne, vous verrez :"Hi votre_nom! You've successfully authenticated."</li>
+							</ul>
+					</ol>
+					</p>
 			</section>
         </main>
     </div>
