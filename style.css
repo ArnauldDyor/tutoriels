@@ -86,12 +86,19 @@ pre {
     border-radius: 5px;
     padding: 10px;
     overflow-x: auto; /* Ajoute un défilement horizontal si le code est trop long */
+    white-space: pre-wrap; /* Permet au texte de se replier sur plusieurs lignes */
+    word-wrap: break-word; /* Permet de casser les mots longs si nécessaire */
+    text-align: left; /* Aligne le texte à gauche */
+    margin: 0; /* Supprime les marges par défaut */
 }
 
 code {
     font-family: "Courier New", Courier, monospace;
     color: #7282c7;
     font-size: 14px;
+    display: block; /* Assure que le code est affiché en bloc */
+    white-space: pre; /* Conserve les espaces et les sauts de ligne */
+    overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
 }
 
 
