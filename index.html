@@ -23,165 +23,164 @@
 
         <!-- Contenu principal -->
         <main class="content">
-            <header>
-                <h1>Installation et Configuration de Git</h1>
-            </header>
-            <section>
-			<h2>1. Installation de Git</h2>
-			<p><h3>Sur Windows</h3>
-			<ol>
-			<li>Télécharger Git</li>
-			<p>Rendez-vous sur git-scm.com et téléchargez l’installateur pour Windows.</p>
-			<li>Lancer l'installation</li>
-			<p>Exécutez le fichier .exe téléchargé.</p>
-			<p>Acceptez les termes et conditions.</p>
-			<p>Options importantes à choisir pendant l’installation :
-			<ul>
-			<li>Editor par défaut : Choisissez VS Code ou un autre éditeur si nécessaire.</li>
-			<li>PATH Environment : Sélectionnez Git from the command line and also from 3rd-party software.</li>
-			<li>Line Ending Conversion : Sélectionnez Checkout Windows-style, commit Unix-style line endings.</li>
-			</ul></p>
-			<li>Vérifier l’installation</li>
-			<p>Ouvrez Git Bash et exécutez :
-			<pre><code class="bash">
-			git --version
-			</code></pre>
-			</p>
-			</ol>
-			</p>
+		<header>
+		<h1>Installation et Configuration de Git</h1>
+		</header>
+		<section>
+		<h2>1. Installation de Git</h2>
+		<p><h3>Sur Windows</h3>
+		<ol>
+		<li>Télécharger Git</li>
+		<p>Rendez-vous sur git-scm.com et téléchargez l’installateur pour Windows.</p>
+		<li>Lancer l'installation</li>
+		<p>Exécutez le fichier .exe téléchargé.</p>
+		<p>Acceptez les termes et conditions.</p>
+		<p>Options importantes à choisir pendant l’installation :
+		<ul>
+		<li>Editor par défaut : Choisissez VS Code ou un autre éditeur si nécessaire.</li>
+		<li>PATH Environment : Sélectionnez Git from the command line and also from 3rd-party software.</li>
+		<li>Line Ending Conversion : Sélectionnez Checkout Windows-style, commit Unix-style line endings.</li>
+		</ul></p>
+		<li>Vérifier l’installation</li>
+		<p>Ouvrez Git Bash et exécutez :
+		<pre><code class="bash">
+		git --version
+		</code></pre>
+		</p>
+		</ol>
+		</p>
+			
+		<p><h3>Sur macOS</h3>
+		<ol>
+		<li>Vérifier si Git est déjà installé</li>
+		<p>Ouvrez un terminal et exécutez :
+		<pre><code class="bash">
+		git --version
+		</code></pre>
+		</p>
+		<p>Si Git est installé, vous verrez une version affichée.</p>
+		<li>Installer Git via Homebrew (recommandé)</li>
+		<p>Installez Homebrew si ce n'est pas encore fait :
+		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</p>
+		<p>Installez Git :
+		brew install git</p>
+		<p>Vérifiez l’installation avec :
+		<pre><code class="bash">
+		git --version
+		</code></pre>
+		</p>
+		<li>Installer Git manuellement (alternative)</li>
+		<p>Téléchargez le package depuis git-scm.com et suivez l'installation.</p>
+		</ol>
+		</p>
+			
+		<p><h3>Sur Linux (Debian/Ubuntu, Fedora, Arch)</h3>
+		<p><h4>Sur Debian/Ubuntu :</h4>
+		<pre><code class="bash">
+		sudo apt update
+		sudo apt install git
+		</code></pre>
+		</p>
 				
-			<p><h3>Sur macOS</h3>
-			<ol>
-			<li>Vérifier si Git est déjà installé</li>
-			<p>Ouvrez un terminal et exécutez :
-			<pre><code class="bash">
-			git --version
-			</code></pre>
-			</p>
-			<p>Si Git est installé, vous verrez une version affichée.</p>
-			<li>Installer Git via Homebrew (recommandé)</li>
-			<p>Installez Homebrew si ce n'est pas encore fait :
-			/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</p>
-			<p>Installez Git :
-			brew install git</p>
-			<p>Vérifiez l’installation avec :
-			<pre><code class="bash">
-				git --version
-			</code></pre>
-			</p>
-			<li>Installer Git manuellement (alternative)</li>
-			<p>Téléchargez le package depuis git-scm.com et suivez l'installation.</p>
-			</ol>
-			</p>
+		<p><h4>Sur Fedora :</h4>
+		<pre><code class="bash">
+		sudo dnf install git
+		</code></pre>
+		</p>
+						
+		<p><h4>Sur Arch Linux :</h4>
+		<pre><code class="bash">
+		sudo pacman -S git
+		</code></pre>
+		</p>
+						
+		<p><h4>Vérifier l’installation :</h4>
+		<pre><code class="bash">
+		git --version
+		</code></pre>
+		</p>
+		</p>
 				
-			<p><h3>Sur Linux (Debian/Ubuntu, Fedora, Arch)</h3>
-			<p><h4>Sur Debian/Ubuntu :</h4>
-			<pre><code class="bash">
-			sudo apt update
-			sudo apt install git
-			</code></pre>
-			</p>
-					
-			<p><h4>Sur Fedora :</h4>
-			<pre><code class="bash">
-			sudo dnf install git
-			</code></pre>
-			</p>
-							
-			<p><h4>Sur Arch Linux :</h4>
-			<pre><code class="bash">
-				sudo pacman -S git
-			</code></pre>
-			</p>
-							
-			<p><h4>Vérifier l’installation :</h4>
-			<pre><code class="bash">
-			git --version
-			</code></pre>
-			</p>
-			</p>
-					
-            </section>
-			<section>
-			<h2>2. Configuration initiale de Git</h2>
-			<p><h3>Configurer le nom et l'email</h3>
-			<pre><code class="bash">
-			git config --global user.name "Votre Nom"
-			git config --global user.email "votre.email@example.com"
-			</code></pre>
-			</p>
-			</p>
-				
-			<p><h3>Vérifier la configuration actuelle</h3>
-			<pre><code class="bash">
-			git config --list
-			</code></pre>
-			</p>
-			</p>
-				
-			<p><h3>Configurer l'éditeur par défaut</h3>
-			<p>Si vous voulez utiliser VS Code comme éditeur :</p>
-			<pre><code class="bash">
-			git config --global core.editor "code --wait"
-			</code></pre></p>
-			</p>
-			</section>
-			<section>
-			<h2>3. Génération et ajout d’une clé SSH (optionnel mais recommandé)</h2>
-			<p><h3>Générer une clé SSH</h3>
-			<pre><code class="bash">
-			ssh-keygen -t rsa -b 4096 -C "votre.email@example.com"
-			</code></pre>
-			</p>
-			<ul>
-			<li>Appuyez sur Entrée pour enregistrer dans le dossier par défaut (~/.ssh/id_rsa).</li>
-			<li>Entrez (ou non) une phrase secrète.</li>
-			</ul>
-			<p><h3>Ajouter la clé SSH à GitHub</h3>
-			<ol>
-			<li>Afficher la clé SSH générée :</li>
-			<pre><code class="bash">
-			cat ~/.ssh/id_rsa.pub
-			</code></pre>
-			<li>Copiez la clé et ajoutez-la sur GitHub :</li>
-			<ul>
-			<li>Allez sur GitHub > Settings > SSH and GPG keys.</li>
-			<li>Cliquez sur New SSH Key et collez la clé.</li>
-			</ul>
-			<li>Tester la connexion :</li>
-			<pre><code class="bash">
-			ssh -T git@github.com
-			</code></pre>
-			<ul>
-			<li>Si tout fonctionne, vous verrez :"Hi votre_nom! You've successfully authenticated."</li>
-			</ul>
-			</ol>
-			</p>
-			</section>
-			<section>
-			<h2>4. Premiers pas avec Git</h2>
-			<p><h3>Initialiser un dépôt Git</h3>
-			<pre><code class="bash">
-			mkdir mon_projet
-			cd mon_projet
-			git init
-			</code></pre>
-			</p>
-			<p><h3>Ajouter et valider des fichiers</h3>
-			<pre><code>
-			echo "Hello Git!" > readme.txt
-			ajout readme.txt
-			commit "Premier commit"
-			</code>
-			</pre>
-			</p>
-			<p><h3>Lier un dépôt GitHub</h3>
-			<pre><code class="bash">
-			git remote add origin git@github.com:votre_user/mon_projet.git
-			git push -u origin main
-			</code></pre>
-			</p>
-			</section>
+		</section>
+		<section>
+		<h2>2. Configuration initiale de Git</h2>
+		<p><h3>Configurer le nom et l'email</h3>
+		<pre><code class="bash">
+		git config --global user.name "Votre Nom"
+		git config --global user.email "votre.email@example.com"
+		</code></pre>
+		</p>
+		</p>
+			
+		<p><h3>Vérifier la configuration actuelle</h3>
+		<pre><code class="bash">
+		git config --list
+		</code></pre>
+		</p>
+		</p>
+			
+		<p><h3>Configurer l'éditeur par défaut</h3>
+		<p>Si vous voulez utiliser VS Code comme éditeur :</p>
+		<pre><code class="bash">
+		git config --global core.editor "code --wait"
+		</code></pre></p>
+		</p>
+		</section>
+		<section>
+		<h2>3. Génération et ajout d’une clé SSH (optionnel mais recommandé)</h2>
+		<p><h3>Générer une clé SSH</h3>
+		<pre><code class="bash">
+		ssh-keygen -t rsa -b 4096 -C "votre.email@example.com"
+		</code></pre>
+		</p>
+		<ul>
+		<li>Appuyez sur Entrée pour enregistrer dans le dossier par défaut (~/.ssh/id_rsa).</li>
+		<li>Entrez (ou non) une phrase secrète.</li>
+		</ul>
+		<p><h3>Ajouter la clé SSH à GitHub</h3>
+		<ol>
+		<li>Afficher la clé SSH générée :</li>
+		<pre><code class="bash">
+		cat ~/.ssh/id_rsa.pub
+		</code></pre>
+		<li>Copiez la clé et ajoutez-la sur GitHub :</li>
+		<ul>
+		<li>Allez sur GitHub > Settings > SSH and GPG keys.</li>
+		<li>Cliquez sur New SSH Key et collez la clé.</li>
+		</ul>
+		<li>Tester la connexion :</li>
+		<pre><code class="bash">
+		ssh -T git@github.com
+		</code></pre>
+		<ul>
+		<li>Si tout fonctionne, vous verrez :"Hi votre_nom! You've successfully authenticated."</li>
+		</ul>
+		</ol>
+		</p>
+		</section>
+		<section>
+		<h2>4. Premiers pas avec Git</h2>
+		<p><h3>Initialiser un dépôt Git</h3>
+		<pre><code class="bash">
+		mkdir mon_projet
+		cd mon_projet
+		git init
+		</code></pre>
+		</p>
+		<p><h3>Ajouter et valider des fichiers</h3>
+		<pre><code class="bash">
+		echo "Hello Git!" > readme.txt
+		ajout readme.txt
+		commit "Premier commit"
+		</code></pre>
+		</p>
+		<p><h3>Lier un dépôt GitHub</h3>
+		<pre><code class="bash">
+		git remote add origin git@github.com:votre_user/mon_projet.git
+		git push -u origin main
+		</code></pre>
+		</p>
+		</section>
         </main>
     </div>
     <footer>
