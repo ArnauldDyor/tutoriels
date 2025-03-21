@@ -122,3 +122,9 @@ a:hover {
     border-radius: 3px; /* Coins arrondis pour un effet plus doux */
     font-weight: bold; /* Texte en gras (optionnel) */
 }
+
+mark {
+    background-color: yellow; /* Surbrillance jaune par défaut */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
