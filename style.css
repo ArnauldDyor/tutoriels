@@ -115,3 +115,10 @@ a:hover {
     text-decoration: underline; /* Ajoute un soulignement au survol */
     color: #2b5d66; /* Change la couleur au survol */
 }
+
+.highlight {
+    background-color: yellow; /* Couleur de fond pour la surbrillance */
+    padding: 2px 4px; /* Espacement intérieur pour améliorer la lisibilité */
+    border-radius: 3px; /* Coins arrondis pour un effet plus doux */
+    font-weight: bold; /* Texte en gras (optionnel) */
+}
