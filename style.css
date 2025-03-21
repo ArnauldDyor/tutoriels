@@ -105,4 +105,13 @@ code {
     display: block; /* Assure que le code est affiché en bloc */
 }
 
+a {
+    color: #377d8b; /* Couleur du lien */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-weight: bold; /* Met le texte en gras */
+}
 
+a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+    color: #2b5d66; /* Change la couleur au survol */
+}
